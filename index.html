@@ -42,14 +42,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Jônatas Gabriel</title>
+    <title>Qualidade de Software - Tudo sobre QA e Engenharia de Qualidade</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary-green: #2ecc71;
-            --dark-green: #27ae60;
+            --primary-blue: #3498db;
+            --dark-blue: #2980b9;
             --black: #212121;
             --white: #ffffff;
             --light-gray: #f5f5f5;
@@ -73,7 +73,7 @@
         .navbar-brand {
             font-weight: 700;
             font-size: 1.5rem;
-            color: var(--primary-green) !important;
+            color: var(--primary-blue) !important;
         }
 
         .nav-link {
@@ -84,12 +84,12 @@
         }
 
         .nav-link:hover, .nav-link.active {
-            color: var(--primary-green) !important;
+            color: var(--primary-blue) !important;
         }
 
         .hero {
             min-height: 100vh;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
             display: flex;
             align-items: center;
             color: var(--white);
@@ -107,7 +107,7 @@
         }
 
         .btn-custom {
-            background: var(--primary-green);
+            background: var(--primary-blue);
             color: var(--white);
             padding: 0.75rem 1.5rem;
             font-weight: 600;
@@ -116,9 +116,9 @@
         }
 
         .btn-custom:hover {
-            background: var(--dark-green);
+            background: var(--dark-blue);
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
         }
 
         .section-title {
@@ -131,7 +131,7 @@
 
         .section-subtitle {
             font-size: 1.1rem;
-            color: var(--dark-green);
+            color: var(--dark-blue);
             text-align: center;
             margin-bottom: 3rem;
         }
@@ -153,7 +153,7 @@
         }
 
         .project-tags .badge {
-            background: var(--primary-green);
+            background: var(--primary-blue);
             margin-right: 0.5rem;
             font-weight: 600;
         }
@@ -170,7 +170,7 @@
             top: 0;
             height: 100%;
             width: 4px;
-            background: var(--primary-green);
+            background: var(--primary-blue);
         }
 
         .timeline-item {
@@ -189,7 +189,7 @@
             width: 1.5rem;
             height: 1.5rem;
             border-radius: 50%;
-            background: var(--primary-green);
+            background: var(--primary-blue);
             border: 3px solid var(--white);
         }
 
@@ -200,8 +200,8 @@
         }
 
         .form-control:focus {
-            border-color: var(--primary-green);
-            box-shadow: 0 0 5px rgba(46, 204, 113, 0.3);
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
         }
 
         .contact-info {
@@ -216,7 +216,7 @@
         .contact-icon {
             width: 3rem;
             height: 3rem;
-            background: var(--primary-green);
+            background: var(--primary-blue);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -235,7 +235,7 @@
         .social-links a {
             width: 2.5rem;
             height: 2.5rem;
-            background: var(--primary-green);
+            background: var(--primary-blue);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -246,7 +246,7 @@
         }
 
         .social-links a:hover {
-            background: var(--dark-green);
+            background: var(--dark-blue);
             transform: translateY(-3px);
         }
 
@@ -262,7 +262,7 @@
             right: 2rem;
             width: 3rem;
             height: 3rem;
-            background: var(--primary-green);
+            background: var(--primary-blue);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -281,6 +281,52 @@
             padding: 5rem 0;
         }
 
+        /* Estilos para o dropdown de equipe */
+        .team-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .team-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--white);
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .team-dropdown-content a {
+            color: var(--black);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        
+        .team-dropdown-content a:hover {
+            background-color: var(--light-gray);
+        }
+        
+        .team-dropdown:hover .team-dropdown-content {
+            display: block;
+        }
+        
+        .team-dropdown-btn {
+            background: none;
+            border: none;
+            color: var(--white);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+        
+        .team-dropdown-btn:hover {
+            color: var(--primary-blue);
+        }
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -293,6 +339,16 @@
             .section-padding {
                 padding: 3rem 0;
             }
+            
+            .team-dropdown-content {
+                position: static;
+                display: none;
+                width: 100%;
+            }
+            
+            .team-dropdown:hover .team-dropdown-content {
+                display: block;
+            }
         }
     </style>
 </head>
@@ -300,7 +356,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#hero">Jonatas Gabriel</a>
+            <a class="navbar-brand" href="#hero">Qualidade de Software</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -308,9 +364,18 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="#hero">Início</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projetos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#resume">Currículo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#methods">Métodos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tools">Ferramentas</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+                    <li class="nav-item team-dropdown">
+                        <button class="team-dropdown-btn nav-link">Equipe <i class="fas fa-chevron-down ms-1"></i></button>
+                        <div class="team-dropdown-content">
+                            <a href="#" onclick="window.location.href='https://tiforce55.github.io/portf/'">Daniel Gaio</a>
+                            <a href="#" onclick="window.location.href='https://erinaldo-junior.github.io/Meu-Portifolio/'">Erinaldo Costa</a>
+                            <a href="#" onclick="window.location.href='https://jon4t4s.github.io/Portf-lio/'">Jônatas Gabriel</a>
+                            <a href="#" onclick="window.location.href='https://kl3berjr.github.io/Tech.Kleber/?fbclid=PAZXh0bgNhZW0CMTEAAaZsZ7p-xq_Vr--oV_gPrHcQsBs9WkrVOOtwbCIprBtA1Dk8vfXOvfIpav4_aem_ZmFrZWR1bW15MTZieXRlcw'">Kleber Nogueira</a>
+                            <a href="#" onclick="window.location.href='https://vidawrd.github.io/portfolio/'">Rodrigo Vidal</a>
+                        </div>
                 </ul>
             </div>
         </div>
@@ -321,9 +386,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <h1 class="mb-4 animate__animated animate__fadeInUp">Olá, eu sou Jônatas Gabriel</h1>
-                    <p class="mb-4 animate__animated animate__fadeInUp animate__delay-1s">Desenvolvedor Web & Mobile | UI/UX Designer</p>
-                    <a href="#contact" class="btn btn-custom animate__animated animate__fadeInUp animate__delay-2s">Entre em Contato</a>
+                    <h1 class="mb-4 animate__animated animate__fadeInUp">Qualidade de Software</h1>
+                    <p class="mb-4 animate__animated animate__fadeInUp animate__delay-1s">Tudo sobre garantia de qualidade, testes e melhores práticas</p>
+                    <a href="#about" class="btn btn-custom animate__animated animate__fadeInUp animate__delay-2s">Saiba Mais</a>
                 </div>
             </div>
         </div>
@@ -332,44 +397,67 @@
     <!-- About Section -->
     <section id="about" class="section-padding">
         <div class="container">
-            <h2 class="section-title">Sobre Mim</h2>
-            <p class="section-subtitle">Transformando ideias em soluções digitais</p>
+            <h2 class="section-title">Sobre Qualidade de Software</h2>
+            <p class="section-subtitle">Entendendo os fundamentos da qualidade em desenvolvimento de software</p>
             <div class="row">
                 <div class="col-lg-6">
-                    <p>Sou Jônatas Gabriel Souza Dias, desenvolvedor apaixonado por criar soluções digitais inovadoras com foco em mobilidade urbana e usabilidade. Minha formação acadêmica e técnica combina desenvolvimento web, mobile e design centrado no usuário, utilizando ferramentas como HTML, CSS, JavaScript, Python, Kotlin e Figma.</p>
-                    <p>Minha experiência abrange a criação de aplicações responsivas, integração de APIs e análise de dados, sempre aplicando metodologias como Design Thinking e Duplo Diamante para garantir resultados de alto impacto.</p>
+                    <p>Qualidade de software refere-se ao conjunto de características que tornam um produto de software adequado ao seu propósito, atendendo às expectativas dos stakeholders e proporcionando uma excelente experiência ao usuário final.</p>
+                    <p>Nossa abordagem abrange desde os conceitos básicos até as técnicas mais avançadas de garantia de qualidade, incluindo testes manuais e automatizados, métricas de qualidade, e processos de melhoria contínua.</p>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><i class="fas fa-check-circle me-2 text-success"></i> Desenvolvimento Web e Mobile</li>
-                        <li class="mb-2"><i class="fas fa-check-circle me-2 text-success"></i> UI/UX Design</li>
-                        <li class="mb-2"><i class="fas fa-check-circle me-2 text-success"></i> Análise de Dados</li>
+                        <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Testes de Software (Unitários, Integração, Sistema)</li>
+                        <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Automação de Testes (Selenium, Cypress, JUnit)</li>
+                        <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Métricas e Padrões de Qualidade (ISO 25010)</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <img src="Jônatas perfil.jpg" alt="Jônatas Gabriel" class="img-fluid rounded-3" style="max-height: 300px;">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Qualidade de Software" class="img-fluid rounded-3" style="max-height: 300px;">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section-padding bg-light">
+    <!-- Methods Section -->
+    <section id="methods" class="section-padding bg-light">
         <div class="container">
-            <h2 class="section-title">Projetos</h2>
-            <p class="section-subtitle">Soluções que fazem a diferença</p>
+            <h2 class="section-title">Métodos de Teste</h2>
+            <p class="section-subtitle">Abordagens para garantir a qualidade do software</p>
             <div class="row">
-                <div class="col-lg-6 mx-auto mb-4">
-                    <div class="card project-card">
-                        <img src="viaflux.png" alt="ViaFlux" class="card-img-top" style="max-width: 150px; height: auto; object-fit: contain; margin: 0 auto; padding: 10px;">
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
                         <div class="card-body">
-                            <h5 class="card-title">ViaFlux</h5>
+                            <h5 class="card-title">Testes Unitários</h5>
+                            <p class="card-text">Testes que verificam as menores unidades de código (funções, métodos) de forma isolada, garantindo que cada componente funcione corretamente.</p>
                             <div class="project-tags mb-2">
-                                <span class="badge">Kotlin</span>
-                                <span class="badge">Figma</span>
-                                <span class="badge">IoT</span>
+                                <span class="badge">JUnit</span>
+                                <span class="badge">Mockito</span>
+                                <span class="badge">TestNG</span>
                             </div>
-                            <p class="card-text">Aplicativo de mobilidade urbana baseado no modelo Duplo Diamante e Design Thinking, integrando IoT, IA e análise de dados para otimizar o trânsito em Porto Velho.</p>
-                            <a href="https://github.com/jon4t4s/viaflux" class="btn btn-custom me-2">GitHub</a>
-                            <a href="https://www.figma.com/file/example" class="btn btn-outline-secondary">Figma</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Testes de Integração</h5>
+                            <p class="card-text">Verificam a interação entre diferentes módulos ou serviços, garantindo que componentes integrados funcionem conforme o esperado.</p>
+                            <div class="project-tags mb-2">
+                                <span class="badge">Postman</span>
+                                <span class="badge">RestAssured</span>
+                                <span class="badge">SoapUI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Testes E2E</h5>
+                            <p class="card-text">Simulam o fluxo completo do usuário através do sistema, verificando todo o processo do início ao fim.</p>
+                            <div class="project-tags mb-2">
+                                <span class="badge">Selenium</span>
+                                <span class="badge">Cypress</span>
+                                <span class="badge">Playwright</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -377,30 +465,33 @@
         </div>
     </section>
 
-    <!-- Resume Section -->
-    <section id="resume" class="section-padding">
+    <!-- Tools Section -->
+    <section id="tools" class="section-padding">
         <div class="container">
-            <h2 class="section-title">Currículo</h2>
-            <p class="section-subtitle">Minha trajetória acadêmica</p>
+            <h2 class="section-title">Ferramentas de Qualidade</h2>
+            <p class="section-subtitle">As principais tecnologias para garantir excelência no software</p>
             <div class="row">
                 <div class="col-lg-6 mx-auto">
-                    <h4 class="mb-4">Experiência Acadêmica</h4>
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
-                            <h6 class="timeline-date">2018 - 2020</h6>
-                            <h5>Técnico em Informática</h5>
-                            <p>Instituto Federal de Rondônia - IFRO</p>
-                            <p>Formação focada em desenvolvimento de software e suporte.</p>
+                            <h5>Ferramentas de Automação</h5>
+                            <p>Selenium, Cypress, Appium, TestComplete, Robot Framework</p>
                         </div>
-                    </div>
-                    <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
-                            <h6 class="timeline-date">2020 - Presente</h6>
-                            <h5>Tecnólogo em Sistemas Para Internet</h5>
-                            <p>Instituto Federal de Rondônia - IFRO</p>
-                            <p>Formação focada em desenvolvimento de software, com ênfase em mobilidade urbana e usabilidade.</p>
+                            <h5>Testes de Performance</h5>
+                            <p>JMeter, Gatling, LoadRunner, k6</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <h5>Análise Estática</h5>
+                            <p>SonarQube, ESLint, Checkstyle, PMD</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <h5>CI/CD e DevOps</h5>
+                            <p>Jenkins, GitHub Actions, GitLab CI, Azure DevOps</p>
                         </div>
                     </div>
                 </div>
@@ -412,26 +503,26 @@
     <section id="contact" class="section-padding bg-light">
         <div class="container">
             <h2 class="section-title">Contato</h2>
-            <p class="section-subtitle">Vamos criar algo incrível juntos</p>
+            <p class="section-subtitle">Entre em contato para saber mais sobre qualidade de software</p>
             <div class="row">
                 <div class="col-lg-6 mb-4">
                     <div class="contact-info">
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div>
                             <h6>E-mail</h6>
-                            <p>jonatasgabrielsouzadias@gmail.com</p>
+                            <p>contato@qualidadesoftware.com</p>
                         </div>
                     </div>
                     <div class="contact-info">
                         <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
                             <h6>Localização</h6>
-                            <p>Porto Velho, RO, Brasil</p>
+                            <p>São Paulo, SP, Brasil</p>
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="https://github.com/jon4t4s" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com/in/jonatasdias" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -463,10 +554,10 @@
     <footer>
         <div class="container text-center">
             <div class="social-links mb-3">
-                <a href="https://github.com/jon4t4s" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/jonatasdias" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
             </div>
-            <p>© 2025 Jônatas Gabriel. Todos os direitos reservados.</p>
+            <p>© 2025 Qualidade de Software. Todos os direitos reservados.</p>
         </div>
     </footer>
 
